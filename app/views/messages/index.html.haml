@@ -1,0 +1,59 @@
+
+.wrapper
+  .flash-box ログインしました
+  .chat-side
+    .side-header
+      .side-header__box
+        %p.side-header__box__user-name USER_name
+          %ul.side-header__box__menu
+            %li.side-header__box__menu__new-group
+              = link_to ""
+              %i.fa.fa-pencil-square-o             
+            
+            %li.side-header__box__menu__edit-user
+              = link_to "/users/172/edit"
+              %i.fa.fa-cog
+    
+
+          = link_to "/groups/@@@/messages"
+            .groups
+              .group
+                %p.group__group-name Group-name
+                %p.group__latest-message latest-message
+
+  .chat-main
+    .main-header
+
+      .main-header__left-box
+        %h2.main-header__left-box__current-group' data-group_id='254'
+          current-group
+
+          %ul.main-header__left-box__member-list 
+            Member：
+            %li.main-header__left-box__member-list__member user-name
+
+          = link_to "/groups/254/edit" class: "main-header__edit-btn" do Edit
+
+  .messages
+    .message_data-message_id='360'
+      .message__upper-info
+        %p.message__upper-info__talker User-name 
+        %p.message__upper-info__date 2019/08/24(Sat) 12:52:24
+        %p.message__text メッセージテキスト
+    
+          .message data-message_id='403'
+            .message__upper-info
+              %p.message__upper-info__talker User-name
+              %p.message__upper-info__date 2019/08/24(Sat) 16:55:03
+
+              %p.message__text メッセージテキスト
+          
+  .form
+    .form#new_message enctype="multipart/form-data" action="/groups/254/messages" accept-charset="UTF-8" method="post">
+      %input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="QCWWEBLKNYnYIyrCsO0NLOVqpUinngwo2SCHYqUFBpBBCnW4zhupx1r3a2jLfP7+l3zO8sFH5IHy6TflywltiA=="
+        .input-box
+          %input placeholder="type a message" class="input-box__text" type="text" name="message[content]" id="message_content"
+          %label.input-box__image for="message_image" %i.fa.fa-image
+          %input.input-box__image__file{:type => "file",  :name => "message[image]" id="message_image"}
+
+          %input{:type => "submit", :name => "commit" :value="Send" class="submit-btn" data-disable-with="Send"}
