@@ -9,7 +9,6 @@
 ### Association
 - has_many :groups, through: :groups_users
 - has_many :messages
-- has_many :members 
 
 
 ## groupsテーブル
@@ -27,7 +26,7 @@ has_many :messages
 
 |Column|Type|Options|
 |------|----|-------|
-|content|string|
+|message|string|
 |image|string|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
