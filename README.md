@@ -19,8 +19,8 @@
 |name|integer|null: false, unique: true|
 
 ### Association
-has_many :users, through: :groups_users
-has_many :messages
+- has_many :users, through: :groups_users
+- has_many :messages
 
 
 ## messagesテーブル
