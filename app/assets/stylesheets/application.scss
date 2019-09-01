@@ -1,6 +1,7 @@
 @import "./reset";
+@import "config/colors";
 @import "messages/chat_main";
 @import "messages/chat_side";
+@import "modules/group";
 @import "modules/user";
-@import "config/colors";
 @import "modules/flash";
