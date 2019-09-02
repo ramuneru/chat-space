@@ -69,12 +69,17 @@
           margin-left: 10px;
         }
       }
-      &__lower_message {
-        
-
+    }
+    .lower_message {
+      margin-top: 10px;
+      &__content {
+        color: $black;
+        font-size: 14px;
+        margin-bottom: 40px;
       }
     }
   }
+
 
       /*右ー下部分フォーム*/
 
@@ -88,6 +93,9 @@
     .new-message {
       display: flex;
       .input-box {
+        .new_message {
+          display: flex;
+        }
         width: 100%;     
         position: relative;
         &__text {
@@ -102,7 +110,7 @@
           font-size: 1.3rem;
           position: absolute;
           top: 10px;
-          right: 20px;
+          right: 130px;
           cursor: pointer;
         }
       }
