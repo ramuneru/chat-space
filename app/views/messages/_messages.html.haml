@@ -4,8 +4,8 @@
       test
     .message__upper-info__date
       test
-.lower_message
-  -# - if message.content.present?
-  %p.message__text 
-    test
-  -# = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+  .lower_message
+    - if message.content.present?
+    %p.message__text 
+      test
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
