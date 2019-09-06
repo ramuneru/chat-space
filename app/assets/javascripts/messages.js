@@ -1,11 +1,11 @@
-// $(function(){
-//   $('').submit(function(event)) {
-//     event.preventDefault();
-//     var 
-//   }
+$(function(){
 
-
-// });
+  $('#message_content').on('submit', function(e) {
+    e.preventDefault();
+    // let formData = new FormData(this);
+    console.log("ok");
+  });
+});
 
 // $('#the-form').submit(function(event) {
 //   // HTMLでの送信をキャンセル
