@@ -47,7 +47,7 @@
     height: calc(100vh - 190px);
     padding: 46px 40px;
     background-color: hsl(0, 0%, 98%);
-    overflow: scroll;
+    overflow: auto;
     .message {
       padding-bottom: 40px;
       &__text {

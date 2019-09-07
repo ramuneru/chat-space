@@ -24,13 +24,3 @@
               = fa_icon 'picture-o', class: 'icon'
               = f.file_field :image, class: 'input-box__image__file', id: "message_image"
             = f.submit 'Send', class: 'submit-btn'
-
-    -# 元の記述      
-    -# .form
-    -#   .new-message
-    -#     .input-box
-    -#       %input{name: "message[content]", placeholder: "type a message", type: "text", class: "input-box__text", id: "message_content"}/
-    -#       %label{for: "message_image", class: "input-box__image"}
-    -#         %i.fa.fa-image
-    -#         %input{name: "message[image]", type: "file", class: "input-box__image__file", id: "message_image"}/
-    -#     %input{ name: "commit", type: "submit", value: "Send", class: "submit-btn"}/

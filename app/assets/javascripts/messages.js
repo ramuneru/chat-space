@@ -1,7 +1,6 @@
 $(function(){
   function buildHTML(message){
     let MessageImage = (message.image) ? `<img src='${ message.image }', class='lower_message__image' >` : ""
-    console.log(MessageImage);
     let html = `<div class='message'>
                   <div class='message__upper-info'>
                     <div class='message__upper-info__talker'>
@@ -35,8 +34,7 @@ $(function(){
     .done(function(data) {
       let html = buildHTML(data);
       $('.messages').append(html);
-      $('#message_content').val('');
-      $('#message_image').val('');
+      $('#new_message')[0].reset();
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
       return false
     })
