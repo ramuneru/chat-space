@@ -6,11 +6,18 @@
     .main-header
       .main-header__left-box
         %h2.main-header__left-box__current-group
-          current-group
+          = @group.name
         %ul.main-header__left-box__member-list
           Member：
-          %li.main-header__left-box__member-list__member user-name
-      = link_to 'Edit', 'https://www.google.com/', class:'main-header__edit-btn'
+          - @group.users.each do |member|
+            %li.main-header__left-box__member-list__member
+              = member.name
+      = link_to edit_group_path(current_user) do
+        .main-header__edit-btn
+          Edit
+
+      -# = link_to 'Edit', 'edit_group_path', class:'main-header__edit-btn'
+
 
     .messages
       = render @messages
