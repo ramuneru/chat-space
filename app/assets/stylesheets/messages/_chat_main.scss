@@ -95,13 +95,12 @@
       display: none;  /* ファイル選択フォームの非表示化 */
     }
     .new-message {
-      display: flex;
       .input-box {
+        width: 100%;     
+        position: relative;
         .new_message {
           display: flex;
         }
-        width: 100%;     
-        position: relative;
         &__text {
           height: 50px;
           width: 100%;
