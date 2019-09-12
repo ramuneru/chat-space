@@ -17,7 +17,3 @@ module ChatSpace
     end
   end
 end
-
-#Timezoneの修正
-config.time_zone = 'Tokyo'
-config.active_record.default_timezone = :local
